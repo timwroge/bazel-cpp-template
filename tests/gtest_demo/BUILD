@@ -258,6 +258,14 @@ cc_test(
 )
 
 cc_test(
+    name = "test_param_share_logic_name_generator_random",
+    srcs = ["test_param_share_logic_name_generator_random.cc"],
+    deps = [
+        "@com_google_googletest//:gtest_main",
+    ],
+)
+
+cc_test(
     name = "test_param_name_generator",
     srcs = ["test_param_name_generator.cc"],
     deps = [

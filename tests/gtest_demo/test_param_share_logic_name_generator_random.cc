@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------------
 // Demo of Test Param with share logic and name generators.
+// In this test we also add random values.
 // By Ari Saif
 //-----------------------------------------------------------------------------
 #include <functional>
@@ -78,18 +79,35 @@ void CountSort(std::vector<int> &input) {
 
   input = out;
 }
-//-----------------------------------------------------------------------------
 
-std::map<std::string, std::vector<int>> input_map = {
-    // Since we are using counting sort, all inputs should be non-negative
-    // integers.
-    {"Empty", {}},
-    {"SingleElement", {1}},
-    {"ReverseSort", {5, 4, 3, 2, 1}},
-    {"SmallVector", {5, 3, 1, 77}},
-    {"Duplicates", {4, 122, 1000, 4, 122, 1000}}
-    //
-};
+//-----------------------------------------------------------------------------
+std::map<std::string, std::vector<int>> CreateInputMap() {
+  std::map<std::string, std::vector<int>> input_map = {
+      // Since we are using counting sort, all inputs should be non-negative
+      // integers.
+      {"Empty", {}},
+      {"SingleElement", {1}},
+      {"ReverseSort", {5, 4, 3, 2, 1}},
+      {"SmallVector", {5, 3, 1, 77}},
+      {"Duplicates", {4, 122, 1000, 4, 122, 1000}},
+      //
+  };
+
+  const int max = 100;
+  // Let's add some random vectors to input_map. The random values are between 0
+  // to max;
+  std::vector<int> random_vector(100);
+  for (int i = 0; i < 100; i++) {
+    std::srand(i);
+    std::generate(random_vector.begin(), random_vector.end(),
+                  []() { return std::rand() % max; });
+    input_map[std::string("Random_") + std::to_string(i)] = random_vector;
+  }
+
+  return input_map;
+}
+
+std::map<std::string, std::vector<int>> input_map = CreateInputMap();
 
 std::map<std::string, std::function<void(std::vector<int> &)>> function_map = {
     //
@@ -98,7 +116,6 @@ std::map<std::string, std::function<void(std::vector<int> &)>> function_map = {
     {"CountSort", CountSort}
     //
 };
-
 class SortTest
     : public testing::TestWithParam<std::tuple<
           std::pair<const std::string, std::function<void(std::vector<int> &)>>,
