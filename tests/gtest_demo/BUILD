@@ -167,6 +167,7 @@ cc_test(
 cc_test(
     name = "hello_world_test",
     srcs = ["hello_world_test.cc"],
+    copts = ["--std=c++17"],
     deps = [
         "@com_google_googletest//:gtest_main",
     ],
@@ -175,6 +176,7 @@ cc_test(
 cc_binary(
     name = "hello_world_test_main",
     srcs = ["hello_world_test_main.cc"],
+    copts = ["--std=c++17"],
     deps = [
         "@com_google_googletest//:gtest",
     ],
