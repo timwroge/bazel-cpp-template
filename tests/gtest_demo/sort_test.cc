@@ -1,5 +1,6 @@
 #include "src/lib/sort/sort.h"
 
+#include <algorithm>
 #include <functional>
 #include <thread>
 #include <vector>

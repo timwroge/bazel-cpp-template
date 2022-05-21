@@ -2,6 +2,7 @@
 // Demo of Test Param with share logic and name generators.
 // By Ari Saif
 //-----------------------------------------------------------------------------
+#include <algorithm>
 #include <functional>
 #include <string>
 #include <thread>
