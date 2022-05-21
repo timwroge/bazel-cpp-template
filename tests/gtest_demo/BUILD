@@ -225,6 +225,7 @@ cc_test(
 cc_test(
     name = "user_types",
     srcs = ["user_types.cc"],
+    copts = ["--std=c++17"],
     deps = [
         "@com_google_googletest//:gtest_main",
     ],
