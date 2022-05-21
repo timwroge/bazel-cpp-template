@@ -1,5 +1,6 @@
 
 #include <algorithm>  // std::transform
+#include <climits>
 #include <functional>
 #include <iterator>  // std::back_inserter
 #include <map>
