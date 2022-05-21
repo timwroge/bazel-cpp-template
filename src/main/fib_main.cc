@@ -1,6 +1,6 @@
+#include <iostream>
 #include <map>
 #include <vector>
-#include <iostream>
 
 // Calculates the n'th Fib number.
 // Returns a negative value if the input is negative.
@@ -21,12 +21,3 @@ int main() {
 
   std::cout << "result: " << result << std::endl;
 }
-
-
-// ari
-// a
-// A
-// a234
-// 2ab --> invalid
-// arash_saif : this is valid in general, only for google test, we don't use _
-// arash saif -> invalid

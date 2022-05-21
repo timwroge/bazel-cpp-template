@@ -1,5 +1,13 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
+# Demo of genrul
+genrule(
+    name = "test",
+    srcs = [],
+    outs = ["test.txt"],
+    cmd = "echo 'Hello world' > $@",
+)
+
 cc_binary(
     name = "main",
     srcs = ["main.cc"],
