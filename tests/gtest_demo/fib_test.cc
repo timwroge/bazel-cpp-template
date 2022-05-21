@@ -24,7 +24,7 @@ TEST(FibTest, NonNegativeValues) {
 
   EXPECT_EQ(Fib(1), 1);
   EXPECT_EQ(Fib(5), 5);
-  EXPECT_EQ(Fib(6), 10) << "Error: The factorial calculation was wrong!";
+  EXPECT_EQ(Fib(6), 8) << "Error: The factorial calculation was wrong!";
 
   EXPECT_TRUE(Fib(6) == 8);
 }
