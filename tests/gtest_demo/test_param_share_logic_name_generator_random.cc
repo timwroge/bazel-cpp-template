@@ -3,6 +3,7 @@
 // In this test we also add random values.
 // By Ari Saif
 //-----------------------------------------------------------------------------
+#include <algorithm>
 #include <functional>
 #include <string>
 #include <thread>
