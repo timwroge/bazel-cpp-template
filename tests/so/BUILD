@@ -55,3 +55,22 @@ cc_test(
         "@com_google_googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "constructor",
+    srcs = ["constructor.cc"],
+    deps = [
+        "@com_google_googletest//:gtest_main",
+    ],
+)
+
+
+
+cc_test(
+    name = "stop_testing",
+    srcs = ["stop_testing.cc"],
+    deps = [
+        "@com_google_googletest//:gtest_main",
+    ],
+)
+
