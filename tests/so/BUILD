@@ -64,8 +64,6 @@ cc_test(
     ],
 )
 
-
-
 cc_test(
     name = "stop_testing",
     srcs = ["stop_testing.cc"],
@@ -74,3 +72,29 @@ cc_test(
     ],
 )
 
+cc_test(
+    name = "static_mock",
+    srcs = ["static_mock.cc"],
+    copts = ["--std=c++17"],
+    deps = [
+        "@com_google_googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "call_another_function",
+    srcs = ["call_another_function.cc"],
+    copts = ["--std=c++17"],
+    deps = [
+        "@com_google_googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "expect_delete",
+    srcs = ["expect_delete.cc"],
+    copts = ["--std=c++17"],
+    deps = [
+        "@com_google_googletest//:gtest_main",
+    ],
+)
