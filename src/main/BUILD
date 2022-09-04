@@ -12,8 +12,6 @@ cc_binary(
     name = "main",
     srcs = ["main.cc"],
     deps = ["//src/lib:CPPLib"],
-    copts = ["-static-libstdc++"],
-    linkstatic=True,
 )
 
 cc_binary(

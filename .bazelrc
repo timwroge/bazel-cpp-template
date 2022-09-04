@@ -1,5 +1,3 @@
 # Address sanitizer configuration.
 # ASAN_SYMBOLIZER_PATH=/usr/local/Cellar/llvm/13.0.0_1/bin/llvm-symbolizer
-build --cxxopt -static-libgcc
-build --cxxopt -static-libstdc++
 build --cxxopt -std=c++17
