@@ -5,4 +5,5 @@ cc_library(
     srcs = ["cpplib.cc"],
     hdrs = ["cpplib.h"],
     visibility = ["//visibility:public"],
+    linkstatic=1,
 )
